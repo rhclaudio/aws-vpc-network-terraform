@@ -22,6 +22,7 @@ variable "environment" {
   default     = "Development"
 }
 
+
 variable "public_subnets" {
   description = "Provider public subnets CIDR values"
   #type        = map(any)
