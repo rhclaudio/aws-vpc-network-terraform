@@ -18,7 +18,7 @@ terraform {
 //}
 
 provider "aws" {
-  region = var.region
+  region = var.region_name
   assume_role {
     role_arn = "arn:aws:iam::${var.account_id}:role/terragrunt-assume-role"
   }
