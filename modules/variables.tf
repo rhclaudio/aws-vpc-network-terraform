@@ -47,3 +47,5 @@ variable "private_subnets" {
   description = "Provide private subnets CIDR values"
   type        = map(any)
 }
+
+variable "account_id" {}

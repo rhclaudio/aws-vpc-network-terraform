@@ -7,7 +7,7 @@ module "eks_vpc" {
   public_subnets  = var.public_subnets
   private_subnets = var.private_subnets
 
-  account_id = "603766876906"
+  account_id = var.account_id
   region = "us-east-1"
 }
 

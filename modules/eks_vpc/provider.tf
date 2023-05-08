@@ -20,7 +20,7 @@ terraform {
 provider "aws" {
   region = var.region
   assume_role {
-    role_arn = "arn:aws:iam::603766876906:role/terragrunt-assume-role"
+    role_arn = "arn:aws:iam::${var.account_id}:role/terragrunt-assume-role"
   }
   default_tags {
     tags = {
