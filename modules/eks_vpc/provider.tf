@@ -7,12 +7,20 @@ terraform {
   }
 }
 
+//provider "aws" {
+//  region = var.region_name
+//  default_tags {
+//    tags = {
+//      "Application" = "Kubernetes"
+//      "Tool"        = "Terragrunt"
+//    }
+//  }
+//}
+
 provider "aws" {
-  region = var.region_name
-  default_tags {
-    tags = {
-      "Application" = "Kubernetes"
-      "Tool"        = "Terragrunt"
-    }
+  region = var.region
+  assume_role {
+    #role_arn = "arn:aws:iam::${var.account_id}:role/obsolescencia-gitlab-deploy-role"
+    role_arn = "arn:aws:iam::603766876906:role/terragrunt-assume-role"
   }
 }

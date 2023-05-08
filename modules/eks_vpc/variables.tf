@@ -4,6 +4,10 @@ locals {
   }
 }
 
+variable "region" {}
+
+variable "account_id" {}
+
 variable "region_name" {
   description = "Region name to launch VPC network"
   type        = string
